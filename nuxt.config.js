@@ -39,12 +39,12 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: `YOUR-ENDPOINT-HERE`,
+        httpEndpoint: process.env.TAKESHAPE_ENDPOINT,
         httpLinkOptions: {
           credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer YOUR-API-KEY-HERE`
+            Authorization: `Bearer ${process.env.TAKESHAPE_API_KEY}`
           }
         }
       }
